@@ -14,7 +14,10 @@ jobs:
       - name: Display the path
         run: echo ${env:PATH}
         shell: pwsh
-      - name: Build Win
+      - name: Build Win 1
+        shell: pwsh
+        run: build_win
+      - name: Build Win 2
         shell: pwsh
         if: startsWith(matrix.os, 'windows')
         env:

@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - name: Build Win
+        shell: pwsh
         if: startsWith(matrix.os, 'windows')
         env:
           NODE_ENV: production
         run: |
-          build_win.ps1
-        shell: pwsh
+          .\build_win.ps1

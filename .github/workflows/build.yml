@@ -11,6 +11,9 @@ jobs:
         os: [windows-latest]
 
     steps:
+      - name: Display the path
+        run: echo ${env:PATH}
+        shell: pwsh
       - name: Build Win
         shell: pwsh
         if: startsWith(matrix.os, 'windows')

@@ -15,8 +15,9 @@ jobs:
         run: echo ${env:PATH}
         shell: pwsh
       - name: Build Win 1
-        shell: pwsh -File {0}
-        run: build_win.ps1
+        shell: pwsh
+        run: |
+          & .\build_win.ps1
       - name: Build Win 2
         shell: pwsh
         if: startsWith(matrix.os, 'windows')

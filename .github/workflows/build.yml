@@ -16,5 +16,5 @@ jobs:
         env:
           NODE_ENV: production
         run: |
-          '& $env:GITHUB_WORKSPACE/build_win.ps1'
+          build_win.ps1
         shell: pwsh

@@ -15,7 +15,7 @@ jobs:
         run: echo ${env:PATH}
         shell: pwsh
       - name: Build Win 1
-        shell: pwsh
+        shell: powershell
         run: |
           & .\build_win.ps1
       - name: Build Win 2

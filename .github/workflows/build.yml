@@ -1,0 +1,20 @@
+name: Build/release
+
+on: push
+
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - name: Build Win
+        if: startsWith(matrix.os, 'windows')
+        env:
+          NODE_ENV: production
+        run: |
+          '& $env:GITHUB_WORKSPACE/build_win.ps1'
+        shell: pwsh
